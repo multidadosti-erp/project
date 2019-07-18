@@ -97,7 +97,7 @@ msgstr "Projeto"
 #. module: project_task_default_stage
 #: model:ir.ui.view,arch_db:project_task_default_stage.edit_project
 msgid "Project Stages"
-msgstr "Estágios do Projeto"
+msgstr "Estágios das Tarefas"
 
 #. module: project_task_default_stage
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_analysis
