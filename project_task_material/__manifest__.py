@@ -14,7 +14,8 @@
               "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/project",
     "license": "AGPL-3",
-    "installable": True,
+    "application": False,
+    "installable": False,
     "depends": [
         "project",
         "product",

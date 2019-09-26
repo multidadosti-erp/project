@@ -20,4 +20,5 @@
     'data': [
         'views/task_stage.xml',
     ],
+    'installable': False,
 }
