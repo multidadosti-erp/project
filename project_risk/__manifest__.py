@@ -22,5 +22,5 @@
 
         'menuitems.xml',
     ],
-    'installable': True,
+    'installable': False,
 }

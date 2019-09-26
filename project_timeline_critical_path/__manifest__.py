@@ -22,5 +22,5 @@
         'templates/assets.xml',
         'views/res_config_settings_view.xml'
     ],
-    'installable': True,
+    'installable': False,
 }

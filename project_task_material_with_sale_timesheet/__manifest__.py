@@ -14,7 +14,7 @@
     "author": "Tecnativa, Praxya, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    "installable": False,
     "depends": [
         "project_task_material_stock",
         "sale_timesheet",
