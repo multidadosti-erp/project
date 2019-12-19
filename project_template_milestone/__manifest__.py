@@ -15,6 +15,7 @@
     ],
     'application': False,
     'auto_install': True,
+    "installable": False,
     'development_status': 'Beta',
     'maintainers': ['patrickrwilson'],
 }
