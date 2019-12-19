@@ -14,6 +14,7 @@
         'views/project.xml',
     ],
     'application': False,
+    "installable": False,
     'development_status': 'Beta',
     'maintainers': ['patrickrwilson'],
 }
