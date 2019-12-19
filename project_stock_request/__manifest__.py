@@ -19,5 +19,5 @@
         'views/stock_request_order_views.xml',
         'security/ir.model.access.csv',
     ],
-    'installable': True,
+    'installable': False,
 }
