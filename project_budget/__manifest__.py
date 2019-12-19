@@ -20,6 +20,7 @@
         'views/account_budget.xml',
     ],
     'application': False,
+    'installable': False,
     'development_status': 'Beta',
     'maintainers': ['patrickrwilson'],
 }
