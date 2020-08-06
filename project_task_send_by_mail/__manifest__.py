@@ -17,5 +17,5 @@
         "views/project_task_views.xml",
         "data/task_template.xml",
     ],
-    "installable": True,
+    "installable": False,
 }
