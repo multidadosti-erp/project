@@ -17,6 +17,6 @@
         'templates/assets.xml',
         'views/project_task_view.xml'
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
 }
