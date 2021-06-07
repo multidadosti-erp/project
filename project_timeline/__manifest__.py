@@ -11,7 +11,8 @@
     "author": "Tecnativa, Onestein, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": False,
+    "installable": True,
+    'auto_install': False,
     "depends": [
         "project",
         "web_timeline",
