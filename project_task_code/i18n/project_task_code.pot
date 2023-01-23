@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-23 20:38+0000\n"
+"PO-Revision-Date: 2023-01-23 20:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,6 +29,6 @@ msgstr ""
 #: code:addons/project_task_code/models/project_task.py:22
 #: sql_constraint:project.task:0
 #, python-format
-msgid "The code must be unique!"
+msgid "The company and task code must be unique!"
 msgstr ""
 
