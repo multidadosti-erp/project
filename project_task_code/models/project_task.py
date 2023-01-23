@@ -12,13 +12,14 @@ class ProjectTask(models.Model):
         required=True,
         default='/',
         readonly=True,
+        index=True,
     )
 
     _sql_constraints = [
         (
             'project_task_unique_code',
-            'UNIQUE (code)',
-            _('The code must be unique!')
+            'UNIQUE (company_id, code)',
+            _('The company and task code must be unique!')
         ),
     ]
 
