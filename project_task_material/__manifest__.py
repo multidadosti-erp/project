@@ -15,7 +15,7 @@
     "website": "https://github.com/OCA/project",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": [
         "project",
         "product",
