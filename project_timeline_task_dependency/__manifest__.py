@@ -16,6 +16,6 @@
     'data': [
         'views/project_task_view.xml'
     ],
-    'installable': False,
+    'installable': False,  # Não Instalavel por incompatibilidade com MultiERP
     'auto_install': False
 }
