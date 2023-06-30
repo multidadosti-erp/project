@@ -10,7 +10,7 @@ class ProjectProject(models.Model):
 
     location_source_id = fields.Many2one(
         comodel_name='stock.location',
-        string='Source Location',
+        string='Source Stock Location',
         index=True,
         help='Default location from which materials are consumed.',
     )
