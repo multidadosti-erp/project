@@ -51,17 +51,17 @@ class Task(models.Model):
     stock_move_ids = fields.Many2many(
         comodel_name='stock.move',
         compute='_compute_stock_move',
-        string='Stock Moves',
+        string='Task Stock Moves',
     )
     analytic_account_id = fields.Many2one(
         comodel_name='account.analytic.account',
-        string='Move Analytic Account',
+        string='Task Move Analytic Account',
         help='Move created will be assigned to this analytic account',
     )
     analytic_line_ids = fields.Many2many(
         comodel_name='account.analytic.line',
         compute='_compute_analytic_line',
-        string='Analytic Lines',
+        string='Task Analytic Lines',
     )
     consume_material = fields.Boolean(
         related='stage_id.consume_material',
@@ -76,7 +76,7 @@ class Task(models.Model):
     )
     location_source_id = fields.Many2one(
         comodel_name='stock.location',
-        string='Source Location',
+        string='Source Stock Location',
         index=True,
         help='Keep this field empty to use the default value from'
         ' the project.',
