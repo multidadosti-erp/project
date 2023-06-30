@@ -25,5 +25,5 @@
         'view/project_project_view.xml',
     ],
     'pre_init_hook': 'pre_init_hook',
-    'installable': False,
+    'installable': False,  # Não Compativel com o MultiERP
 }
