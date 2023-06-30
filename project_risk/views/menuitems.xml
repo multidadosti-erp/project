@@ -4,15 +4,15 @@
 
 <odoo>
     <menuitem id="project_risk_menu"
-        parent="project.menu_main_pm"
-        sequence="3"
-        action="project_risk_action"/>
+              parent="project.menu_projects"
+              sequence="3"
+              action="project_risk_action"/>
 
     <menuitem id="project_risk_category_menu"
-        parent="project.menu_project_config"
-        action="project_risk_category_action"/>
+              parent="project.menu_project_config"
+              action="project_risk_category_action"/>
 
     <menuitem id="project_risk_response_category_menu"
-        parent="project.menu_project_config"
-        action="project_risk_response_category_action"/>
+              parent="project.menu_project_config"
+              action="project_risk_response_category_action"/>
 </odoo>
