@@ -21,5 +21,5 @@
         "views/project_task_stage_view.xml",
         "wizard/recalculate_wizard.xml",
     ],
-    'installable': False,
+    'installable': True,
 }
