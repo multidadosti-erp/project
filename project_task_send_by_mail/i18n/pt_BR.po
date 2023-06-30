@@ -9,16 +9,27 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-23 02:56+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2020-06-22 03:19+0000\n"
 "Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
 "23907/pt_BR/)\n"
+=======
+"PO-Revision-Date: 2017-08-23 02:56+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
+<<<<<<< HEAD
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.10\n"
+=======
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 
 #. module: project_task_send_by_mail
 #: model:mail.template,body_html:project_task_send_by_mail.email_task_template
@@ -77,6 +88,7 @@ msgid ""
 "</div>\n"
 "        "
 msgstr ""
+<<<<<<< HEAD
 "\n"
 "<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-"
 "serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
@@ -130,22 +142,36 @@ msgstr ""
 "    </div>\n"
 "</div>\n"
 "        "
+=======
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 
 #. module: project_task_send_by_mail
 #: model:mail.template,subject:project_task_send_by_mail.email_task_template
 msgid "${object.company_id.name} Task (Ref ${object.name or 'n/a'})"
+<<<<<<< HEAD
 msgstr "${object.company_id.name} Tarefa (Ref ${object.name or 'n/a'})"
+=======
+msgstr ""
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 
 #. module: project_task_send_by_mail
 #: code:addons/project_task_send_by_mail/models/project.py:27
 #, python-format
 msgid "Compose Email"
+<<<<<<< HEAD
 msgstr "Escrever Email"
+=======
+msgstr ""
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 
 #. module: project_task_send_by_mail
 #: model_terms:ir.ui.view,arch_db:project_task_send_by_mail.view_task_form2
 msgid "Send by Email"
+<<<<<<< HEAD
 msgstr "Enviar por Email"
+=======
+msgstr ""
+>>>>>>> e8431d93d724863434e1ce0c5b57e486e661e3cb
 
 #. module: project_task_send_by_mail
 #: model:ir.model,name:project_task_send_by_mail.model_project_task
