@@ -20,5 +20,5 @@
     'data': [
         'views/task_stage.xml',
     ],
-    'installable': True,
+    'installable': False,  # Não compativel com o MultiERP
 }
