@@ -3,8 +3,8 @@
 
 <odoo>
     <!-- List View-->
-    <record id="project_milestone_view_inherit_list" model="ir.ui.view">
-        <field name="name">project.milestone.tree</field>
+    <!-- <record id="view_project" model="ir.ui.view">
+        <field name="name">project_milestone_view_project</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project"/>
         <field name="type">tree</field>
@@ -14,10 +14,10 @@
                 <field name="milestone_ids"/>
             </field>
         </field>
-   </record>
+   </record> -->
 
     <!-- Form View -->
-    <record id="project_enhancement_milestone_view_inherit_form" model="ir.ui.view">
+    <record id="edit_project" model="ir.ui.view">
         <field name="name">project.milestone.form</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project"/>
@@ -52,7 +52,7 @@
     </record>
 
     <!-- Simplified Form View -->
-    <record id="project_enhancement_milestone_view_inherit_simple" model="ir.ui.view">
+    <record id="project_project_view_form_simplified" model="ir.ui.view">
         <field name="name">project.milestone.simpleform</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
@@ -65,7 +65,7 @@
     </record>
 
     <!-- Search View -->
-    <record id="project_enhancements_milestone_inherit_search_view" model="ir.ui.view">
+    <record id="view_project_project_filter" model="ir.ui.view">
         <field name="name">project.milestone.filter</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_project_filter"/>
