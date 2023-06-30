@@ -30,6 +30,11 @@ msgid "Dependencies"
 msgstr ""
 
 #. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
+msgid "Dependencies"
+msgstr ""
+
+#. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task__depending_task_ids
 msgid "Depending Tasks"
 msgstr ""

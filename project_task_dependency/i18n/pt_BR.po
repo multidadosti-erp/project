@@ -1,25 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * project_task_dependency
+#	* project_task_dependency
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
-# falexandresilva <falexandresilva@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-01 03:31+0000\n"
-"PO-Revision-Date: 2020-06-23 03:19+0000\n"
-"Last-Translator: Fernando Colus <fcolus1@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2023-06-29 12:26+0000\n"
+"PO-Revision-Date: 2023-06-29 12:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10\n"
+"Plural-Forms: \n"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__create_uid
@@ -33,7 +27,7 @@ msgstr "Criado em"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task__dependency_task_ids
-#: model_terms:ir.ui.view,arch_db:project_task_dependency.project_task_form
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
 msgid "Dependencies"
 msgstr "Dependências"
 
@@ -45,27 +39,27 @@ msgstr "Tarefas dependentes"
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__display_name
 msgid "Display Name"
-msgstr "Exibir Nome"
+msgstr "Nome exibido"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__id
 msgid "ID"
-msgstr "ID (Identificação)"
+msgstr "Id."
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map____last_update
 msgid "Last Modified on"
-msgstr "Última Modificação Feita em"
+msgstr "Última modificação em"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__write_uid
 msgid "Last Updated by"
-msgstr "Última Atualização Feita por"
+msgstr "Última atualização por"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__write_date
 msgid "Last Updated on"
-msgstr "Última Atualização Feita em"
+msgstr "Última atualização em"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__new_task_id
@@ -78,9 +72,14 @@ msgid "Old Task"
 msgstr "Tarefa Antiga"
 
 #. module: project_task_dependency
-#: model_terms:ir.ui.view,arch_db:project_task_dependency.project_task_form
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
 msgid "Open Task"
-msgstr ""
+msgstr "Abrir Tarefa"
+
+#. module: project_task_dependency
+#: model:ir.model,name:project_task_dependency.model_project_project
+msgid "Project"
+msgstr "Projeto"
 
 #. module: project_task_dependency
 #: model:ir.model,name:project_task_dependency.model_project_task_copy_map
@@ -113,13 +112,6 @@ msgstr "Tarefas que são dependendentes desta tarefa (Recursivo)."
 #: model:ir.model.fields,help:project_task_dependency.field_project_task__depending_task_ids
 msgid "Tasks that are dependent on this task."
 msgstr "Tarefas dependentes dessa tarefa."
-
-#. module: project_task_dependency
-#: model:ir.model,name:project_task_dependency.model_project_project
-msgid "WBS element"
-msgstr ""
-"Elemento da WBS (Work Breakdown Structure = Estrutura de Decomposição do "
-"Trabalho)"
 
 #. module: project_task_dependency
 #: code:addons/project_task_dependency/models/project_task.py:82
