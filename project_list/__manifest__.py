@@ -11,7 +11,7 @@
         'CorporateHub, '
         'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
-    'installable': True,
+    'installable': False,  # Não compativel com o MultiERP
     'application': False,
     'summary': 'Projects list view',
     'depends': [
