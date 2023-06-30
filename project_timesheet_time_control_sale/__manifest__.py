@@ -12,7 +12,7 @@
     "maintainers": ["eLBati"],
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    'installable': False,  # Não Instalavel por incompatibilidade com MultiERP
     "auto_install": True,
     "depends": [
         "project_timesheet_time_control",
