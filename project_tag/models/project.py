@@ -7,4 +7,9 @@ from odoo import models, fields
 class Project(models.Model):
     _inherit = 'project.project'
 
-    tag_ids = fields.Many2many('project.tags', string="Tags",)
+    tag_ids = fields.Many2many(
+        'project.tags',
+        string="Tags",
+        oldname='project_tags_ids',
+        ondelete='restrict',
+    )
