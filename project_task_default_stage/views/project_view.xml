@@ -29,12 +29,18 @@
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
-                <page string="Project Stages"
-                      name="project_stages">
-                     <field name="type_ids"/>
+                <page string="Project Stages" name="project_stages">
+                    <field name="type_ids">
+                        <tree>
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="case_default"/>
+                            <field name="fold"/>
+                            <field name="description"/>
+                        </tree>
+                    </field>
                 </page>
             </xpath>
         </field>
     </record>
-
 </odoo>
