@@ -7,29 +7,43 @@ class TestProjectMilestone(common.TransactionCase):
 
     def setUp(self):
         super().setUp()
+
         self.test_project = self.env['project.project'].create({
-            'name': 'TestProject'})
+            'name': 'TestProject'
+        })
+
         self.test_project_milestone_1 = self.env['project.milestone'].create({
             'name': 'TestMilestone_1',
-            'project_id': self.test_project.id})
+            'project_id': self.test_project.id
+        })
+
         self.test_project_milestone_2 = self.env['project.milestone'].create({
             'name': 'TestMilestone_2',
-            'project_id': self.test_project.id})
+            'project_id': self.test_project.id
+        })
+
         self.test_open_stage = self.env['project.task.type'].create({
-            'name': 'TestOpenStage'})
+            'name': 'TestOpenStage'
+        })
+
         self.test_close_stage = self.env['project.task.type'].create({
             'name': 'TestCloseStage',
-            'closed': True})
+            'state': 'done'
+        })
+
         self.test_task = self.env['project.task'].create({
             'name': 'TestTask',
             'project_id': self.test_project.id,
             'milestone_id': self.test_project_milestone_1.id,
-            'stage_id': self.test_open_stage.id})
+            'stage_id': self.test_open_stage.id
+        })
+
         self.env['project.task'].create({
             'name': 'TestTask',
             'project_id': self.test_project.id,
             'milestone_id': self.test_project_milestone_1.id,
-            'stage_id': self.test_close_stage.id})
+            'stage_id': self.test_close_stage.id
+        })
 
     def test_milestone_sequences(self):
         milestone1 = self.test_project_milestone_1
@@ -39,6 +53,7 @@ class TestProjectMilestone(common.TransactionCase):
 
     def test_milestone_progress(self):
         milestone1 = self.test_project_milestone_1
+        milestone1._compute_milestone_progress()
 
         self.assertEqual(milestone1.progress, 50)
 
