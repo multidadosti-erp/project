@@ -11,7 +11,7 @@
     "author": "Tecnativa, Onestein, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    'installable': False,  # Não Instalavel por incompatibilidade com MultiERP
     'auto_install': False,
     "depends": [
         "project",
