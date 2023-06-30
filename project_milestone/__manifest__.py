@@ -8,14 +8,14 @@
     'category': 'Project Management',
     'version': '12.0.1.0.0',
     'license': 'AGPL-3',
-    'depends': ['project', 'project_stage_closed'],
+    'depends': ['project', 'project_stage_state'],
     'data': [
         'views/project.xml',
         'views/project_task.xml',
         'views/project_milestone.xml',
         'security/ir.model.access.csv',
     ],
-    'application': False,
+    'application': True,
     'development_status': 'Beta',
     'maintainers': ['patrickrwilson'],
 }

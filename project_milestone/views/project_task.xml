@@ -3,7 +3,7 @@
 
 <odoo>
     <!-- List View -->
-    <record model="ir.ui.view" id="view_task_enhancement_milestone_tree" >
+    <record model="ir.ui.view" id="view_task_tree2" >
         <field name="name">project.task.enhancement.milestone.tree</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_tree2"/>
@@ -17,7 +17,7 @@
     </record>
 
     <!-- Form View -->
-    <record model="ir.ui.view" id="view_task_enhancement_milestone_form" >
+    <record model="ir.ui.view" id="view_task_form2" >
       <field name="name">project.task.enhancement.milestone.form</field>
       <field name="model">project.task</field>
       <field name="inherit_id" ref="project.view_task_form2"/>
@@ -36,7 +36,7 @@
     </record>
 
     <!-- Kanban View -->
-    <record model="ir.ui.view" id="view_task_enhancement_milestone_kanban">
+    <record model="ir.ui.view" id="view_task_kanban">
         <field name="name">project.task.enhancement.milestone.kanban</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_kanban"/>
