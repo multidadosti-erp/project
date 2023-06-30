@@ -9,5 +9,13 @@ class ProjectTask(models.Model):
 
     _inherit = 'project.task'
 
-    state = fields.Selection(
-        related='stage_id.state', store=True)
+    stage_state = fields.Selection(
+        related='stage_id.state',
+        oldname='state',
+        store=True
+    )
+
+    closed = fields.Boolean(
+        related='stage_id.closed',
+        store=True
+    )
