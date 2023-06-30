@@ -23,6 +23,7 @@
     ],
 
     'application': False,
+    'installable': False,  # Não Instalavel por incompatibilidade com MultiERP
     'development_status': 'Beta',
     'maintainers': ['patrickrwilson'],
 }
