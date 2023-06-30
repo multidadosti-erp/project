@@ -18,5 +18,5 @@
         'view/project_task_view.xml',
         'view/project_view.xml',
     ],
-    'installable': True,
+    'installable': False,  # Não Compativel com o MultiERP
 }
