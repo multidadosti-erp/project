@@ -17,6 +17,6 @@
         'templates/assets.xml',
         'views/project_task_view.xml'
     ],
-    'installable': True,
+    'installable': False,  # Não Instalavel por incompatibilidade com MultiERP
     'auto_install': False,
 }
