@@ -32,16 +32,22 @@
             </field>
             <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
                 <div class="pull-right" groups="base.group_user" style="margin-left: 10px;">
-                    <t attrs="{'invisible': [('parent_id', '!=', False)]}"
+                    <t attrs="{'invisible': [('subtask_count', '=', 0)]}"
                         groups="project.group_subtask_project">
                         <a type="object" name="action_subtask" style="font-weight:bold;color:green">
                             <span class="fa fa-angle-double-right fa-lg"/>
                             <span><field name="subtask_count"/></span>
                         </a>
                     </t>
+                    <t attrs="{'invisible' : [('parent_id', '=', False)]}"
+                        groups="project.group_subtask_project">
+                        <a type="object" name="action_open_parent_task" style="font-weight:bold;color:green">
+                            <span class="fa fa-angle-double-left fa-lg"/>
+                            <span>1</span>
+                        </a>
+                    </t>
                 </div>
             </xpath>
         </field>
     </record>
-
  </odoo>
