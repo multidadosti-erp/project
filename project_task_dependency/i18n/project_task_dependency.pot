@@ -122,3 +122,22 @@ msgstr ""
 msgid "You cannot create recursive dependencies between tasks."
 msgstr ""
 
+#. module: project_task_dependency
+#: model:ir.model.fields,help:project_task_dependency.field_project_task__dependency_open_task_count
+msgid "Tasks with open dependencies"
+msgstr ""
+
+#. module: project_task_dependency
+#: model:ir.model.fields,field_description:project_task_dependency.field_project_task__dependency_open_task_count
+msgid "Dependency Open Count"
+msgstr ""
+
+#. module: project_task_dependency
+#: model:ir.actions.act_window,name:project_task_dependency.action_dependency_tasks
+msgid "Dependency Tasks"
+msgstr ""
+
+#. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
+msgid "Closed"
+msgstr ""

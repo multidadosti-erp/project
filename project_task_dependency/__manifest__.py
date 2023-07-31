@@ -10,7 +10,8 @@
     'author': "Onestein,Odoo Community Association (OCA)",
     'license': 'AGPL-3',
     'depends': [
-        'project'
+        'project',
+        'project_stage_state',
     ],
     'data': [
         'views/project_task_view.xml'

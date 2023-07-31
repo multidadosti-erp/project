@@ -16,10 +16,11 @@
                             <field name="user_id"/>
                             <field name="date_deadline"/>
                             <field name="stage_id"/>
-                            
+                            <field name="closed" string="Closed"/>
+
                             <button name="button_open_task"
                                     type="object" title="Open Task"
-                                    icon="fa-arrow-right"
+                                    icon="fa-window-restore"
                                     aria-label="Open Task"
                                     class="btn-link"/>
                         </tree>
@@ -27,5 +28,34 @@
                 </page>
             </xpath>
         </field>
+    </record>
+
+    <record id="view_task_kanban" model="ir.ui.view">
+        <field name="name">project.task.kanban</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <field name="color" position="after">
+                <field name="dependency_open_task_count"/>
+            </field>
+
+            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                <div class="pull-right" groups="base.group_user" style="margin-left: 10px;">
+                    <t attrs="{'invisible': [('dependency_open_task_count', '=', 0)]}">
+                        <a type="object" name="button_action_dependency_tasks" style="font-weight:bold;color:orange">
+                            <span class="fa fa-exclamation-triangle fa-lg"/>
+                            <span><field name="dependency_open_task_count"/></span>
+                        </a>
+                    </t>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_dependency_tasks" model="ir.actions.act_window">
+        <field name="name">Dependency Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
+        <field name="search_view_id" ref="project.view_task_search_form"/>
     </record>
 </odoo>

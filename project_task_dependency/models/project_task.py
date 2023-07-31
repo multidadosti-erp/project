@@ -12,7 +12,8 @@ class ProjectTask(models.Model):
         string='Dependencies',
         comodel_name='project.task',
         relation='project_task_dependency_task_rel',
-        column1='task_id', column2='dependency_task_id'
+        column1='task_id',
+        column2='dependency_task_id'
     )
 
     recursive_dependency_task_ids = fields.Many2many(
@@ -34,6 +35,17 @@ class ProjectTask(models.Model):
         help='Tasks that are dependent on this task (recursive).',
         compute='_compute_recursive_depending_task_ids'
     )
+
+    dependency_open_task_count = fields.Integer(
+        "Dependency Open Count",
+        compute='_compute_dependency_open_task_count',
+        help="Tasks with open dependencies"
+    )
+
+    @api.depends('dependency_task_ids')
+    def _compute_dependency_open_task_count(self):
+        for task in self:
+            task.dependency_open_task_count = len(task.dependency_task_ids.filtered(lambda t: t.closed == False)) # noqa
 
     @api.depends('dependency_task_ids')
     def _compute_recursive_dependency_task_ids(self):
@@ -102,4 +114,20 @@ class ProjectTask(models.Model):
             'view_mode': 'form',
             'view_type': 'form',
         }
+        return action
+
+    def button_action_dependency_tasks(self):
+        """ Metodo para direcionar a action para visualizar
+            as tarefas dependentes.
+
+        Returns:
+            action: Action/XML
+        """
+        action = self.env.ref('project_task_dependency.action_dependency_tasks').read()[0] # noqa
+        ctx = self.env.context.copy()
+        ctx.update({
+            'search_default_project_id': False,
+        })
+        action['context'] = ctx
+        action['domain'] = [('id', 'in', self.dependency_task_ids.ids)]
         return action

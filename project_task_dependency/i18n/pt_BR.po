@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-29 12:26+0000\n"
-"PO-Revision-Date: 2023-06-29 12:26+0000\n"
+"POT-Creation-Date: 2023-07-31 18:08+0000\n"
+"PO-Revision-Date: 2023-07-31 18:08+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,16 @@ msgstr "Criado em"
 #: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
 msgid "Dependencies"
 msgstr "Dependências"
+
+#. module: project_task_dependency
+#: model:ir.model.fields,field_description:project_task_dependency.field_project_task__dependency_open_task_count
+msgid "Dependency Open Count"
+msgstr "Qtde Dependência"
+
+#. module: project_task_dependency
+#: model:ir.actions.act_window,name:project_task_dependency.action_dependency_tasks
+msgid "Dependency Tasks"
+msgstr "Tarefas de Dependência"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task__depending_task_ids
@@ -97,7 +107,7 @@ msgid "Recursive Depending Tasks"
 msgstr "Tarefas Recursivas Dependente"
 
 #. module: project_task_dependency
-#: code:addons/project_task_dependency/models/project_task.py:98
+#: code:addons/project_task_dependency/models/project_task.py:110
 #: model:ir.model,name:project_task_dependency.model_project_task
 #, python-format
 msgid "Task"
@@ -114,7 +124,17 @@ msgid "Tasks that are dependent on this task."
 msgstr "Tarefas dependentes dessa tarefa."
 
 #. module: project_task_dependency
-#: code:addons/project_task_dependency/models/project_task.py:82
+#: model:ir.model.fields,help:project_task_dependency.field_project_task__dependency_open_task_count
+msgid "Tasks with open dependencies"
+msgstr "Tarefas com dependências abertas"
+
+#. module: project_task_dependency
+#: code:addons/project_task_dependency/models/project_task.py:94
 #, python-format
 msgid "You cannot create recursive dependencies between tasks."
 msgstr "Você não pode criar dependências recursivas entre tarefas."
+
+#. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_form2
+msgid "Closed"
+msgstr "Fechada"
