@@ -244,35 +244,36 @@ class ProjectTask(models.Model):
             resource, calendar = task._resource_calendar_select()
             if not calendar:
                 continue
+
             increment, project_date, from_days = task._calculation_prepare()
             date_start = False
             date_end = False
-            from_days = self._from_days_dec(
-                from_days, project_date, resource, calendar, increment)
-            planned_dt = self._calendar_plan_days(
-                from_days, project_date, resource, calendar)
+            from_days = self._from_days_dec(from_days, project_date, resource, calendar, increment)
+            planned_dt = self._calendar_plan_days(from_days, project_date, resource, calendar)
+
             if planned_dt:
                 day = planned_dt.replace(hour=0, minute=0, second=0)
-                first = self._first_interval_of_day_get(
-                    day, resource, calendar)
+                first = self._first_interval_of_day_get(day, resource, calendar)
                 if first:
                     date_start = first[0]
+
             if date_start:
-                end_planned_dt = self._calendar_plan_days(
-                    task.estimated_days, date_start, resource, calendar)
+                end_planned_dt = self._calendar_plan_days(task.estimated_days, date_start, resource, calendar)
                 if end_planned_dt:
-                    date_end = self._last_interval_of_day_get(
-                        end_planned_dt, resource, calendar)[1]
+                    date_end = self._last_interval_of_day_get(end_planned_dt, resource, calendar)[1]
+
             if date_start:
                 date_start = date_start.astimezone(utc)
+
             if date_end:
                 date_end = date_end.astimezone(utc)
 
             task.with_context(task.env.context, task_recalculate=True).write({
-                'date_start': date_start or False,
-                'date_end': date_end or False,
-                'date_deadline': date_end or False,
+                'date_start': date_start.date() or False,
+                'date_end': date_end.date() or False,
+                'date_deadline': date_end.date() or False,
             })
+            
         return True
 
     @api.multi
