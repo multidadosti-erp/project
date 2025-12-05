@@ -22,11 +22,7 @@
         <field name="inherit_id" ref="project.view_project_kanban"/>
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('o_kanban_card_manage_section')]" position="inside">
-                <div>
-                    <a name="view_risk" type="object">
-                        Risks
-                    </a>
-                </div>
+                <a role="menuitem" name="view_risk" type="object" class="dropdown-item">Risks</a>
             </xpath>
         </field>
     </record>
