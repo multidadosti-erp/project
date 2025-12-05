@@ -30,9 +30,7 @@
     <field name="arch" type="xml">
         <xpath expr="//div[hasclass('o_kanban_card_manage_section')]" position="inside">
           <field name="is_template" invisible="1"/>
-          <div t-if="record.is_template.raw_value" role="menuitem">
-              <a name="create_project_from_template" type="object">Create Project from Template</a>
-          </div>
+          <a role="menuitem" t-if="record.is_template.raw_value" name="create_project_from_template" type="object" class="dropdown-item">Create Project from Template</a>
         </xpath>
     </field>
   </record>
